@@ -11,8 +11,8 @@ def multiplication(args):
     for number in args[1:]:
         result = result * number
     data_set = {}
-    data_set['Numbers'] = args
-    data_set['Multiplication'] = result
+    data_set['numbers'] = args
+    data_set['multiplication'] = result
     json_object = json.loads(json.dumps(data_set))
     return json_object
 

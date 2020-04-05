@@ -1,4 +1,4 @@
-.PHONY: build test clean package
+.PHONY: init build test clean lint container package venv/bin/activate
 
 VENV_NAME?=venv
 
@@ -22,20 +22,25 @@ venv/bin/activate: requirements.txt
 	. venv/bin/activate; pip install -Ur requirements.txt
 	touch venv/bin/activate
 
-build: venv lint
+init: venv
+
+build: lint
 
 test:
-	py.test tests.py
+	py.test tests
 
 clean:
 	rm -rf simple_service.egg-info
 	rm -rf dist
 	rm -rf simple_service/__pycache__
+	rm -rf venv
 
 lint: 
 	pylint simple_service	
 
-container:
+docker: clean build_container
+
+build_container:
 	docker build -t simple_service .
 
 package: 

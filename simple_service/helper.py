@@ -36,9 +36,6 @@ def sort_descending(args):
 def random_number(args):
     print(args)
 
-def parse_numbers():
-    pass
-
 def print_menu():
     text = """
     1. Subtraction 

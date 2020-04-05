@@ -26,7 +26,7 @@ def main_menu(arguments):
         input("Press Enter to continue...")
 
 def main(args):
-    if len(args) < 7:
+    if len(args) != 7:
         helper.usage()
         sys.exit(1)
 
