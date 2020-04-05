@@ -2,3 +2,5 @@ dist/
 simple_service.egg-info/
 pytest_cache/
 .vscode
+venv
+multiplication_result.txt
