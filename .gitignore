@@ -1,6 +1,7 @@
 dist/
 simple_service.egg-info/
 simple_service/__pycache__
+simple_service/*.pyc
 pytest_cache/
 .vscode
 venv
