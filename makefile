@@ -1,4 +1,4 @@
-.PHONY: init build test clean lint container package venv/bin/activate
+.PHONY: init build test clean lint container package 
 
 VENV_NAME?=venv
 
@@ -34,9 +34,7 @@ clean:
 	rm -rf dist
 	rm -rf simple_service/__pycache__
 	rm -rf venv
-	rm multiplication_result.txt
-
-lint: 
+lint: init
 	pylint simple_service	
 
 docker: clean build_container
