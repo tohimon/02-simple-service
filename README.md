@@ -1,5 +1,7 @@
 # Simple service
 
+[![Build Status](https://travis-ci.com/tohimon/02-simple-service.svg?branch=master)](https://travis-ci.com/tohimon/02-simple-service)
+
 This is an excersise written in python.
 
 ## Getting Started
