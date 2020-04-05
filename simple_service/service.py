@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 from . import model, helper
 
@@ -16,11 +18,11 @@ def main_menu(arguments):
         }
 
         func = switch.get(user_input, "invalid_choice")
-        try:
+        if func != "invalid_choice":
             result = getattr(model, func)(arguments)
             getattr(helper, func)(result)
-        except:
-            raise
+        else:
+            getattr(helper, func)()
         input("Press Enter to continue...")
 
 def main(args):
@@ -32,10 +34,10 @@ def main(args):
     try:
         numbers = model.parse(args)
         main_menu(numbers)
-    except ValueError as e:
-        helper.eerror(e)
+    except ValueError as error:
+        helper.eerror(error)
         helper.usage()
         sys.exit(1)
-    
+
 if __name__ == "__main__":
     main(sys.argv)

@@ -1,6 +1,8 @@
-from clear_screen import clear
+#!/usr/bin/env python
+
 import sys
 import json
+from clear_screen import clear
 
 def einfo(*args):
     print("[INFO] >>> ", *args)
@@ -47,7 +49,6 @@ def print_menu():
     """
     print(text)
 
-def invalid_choice(*args):
+def invalid_choice():
     einfo("Invalid choice!")
-
         

@@ -1,6 +1,7 @@
+#!/usr/bin/env python
+
 import json
 import random
-from simple_service import helper
 
 def subtraction(args):
     return [num-1 for num in  args]
@@ -19,9 +20,9 @@ def sort_ascending(args):
     return sorted(args)
 
 def sort_descending(args):
-    list = sort_ascending(args)
-    list.reverse()
-    return list
+    sorted_list = sort_ascending(args)
+    sorted_list.reverse()
+    return sorted_list
 
 def random_number(args):
     return random.choice(args)
@@ -29,9 +30,5 @@ def random_number(args):
 def parse(args):
     try:
         return list(map(int, args))
-    except ValueError as e:
-        raise e
-
-
-def invalid_choice(*args):
-    pass
+    except ValueError as error:
+        raise error
