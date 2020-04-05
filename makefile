@@ -34,6 +34,7 @@ clean:
 	rm -rf dist
 	rm -rf simple_service/__pycache__
 	rm -rf venv
+	rm multiplication_result.txt
 
 lint: 
 	pylint simple_service	
