@@ -18,10 +18,20 @@ These instructions will get you a copy of the project up and running on your loc
 Run a following command in the terminal:
 
 ```bash
-make build
+make init
 ```
 
-This will setup a virtualenv, install pip packages and run a liner against the code.
+This will setup a virtualenv and install pip packages. Then, activate the virtualenv:
+
+```
+source venv/bin/activate
+```
+
+... and run a build command which will run a linter against the code:
+
+```bash
+make build
+```
 
 Alternatively, build a docker image:
 
@@ -33,14 +43,6 @@ make docker
 
 ```bash
 make package
-```
-
-### Cleaning up
-
-This command will remove built packages and clean up the working directory.
-
-```bash
-make clean
 ```
 
 ## Running the tests
@@ -65,4 +67,12 @@ Alternatively, run a docker image, if previously had been built:
 
 ```bash
 docker run ARG1 ARG2 ARG3 ARG4 ARG5 ARG6
+```
+
+### Cleaning up
+
+This command will remove built packages and clean up the working directory.
+
+```bash
+make clean
 ```

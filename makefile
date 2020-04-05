@@ -26,20 +26,18 @@ init: venv
 
 build: lint
 
-test:
-	py.test tests
+test: 
+	pytest tests
 
 clean:
 	rm -rf simple_service.egg-info
 	rm -rf dist
 	rm -rf simple_service/__pycache__
 	rm -rf venv
-lint: init
+lint: 
 	pylint simple_service	
 
-docker: clean build_container
-
-build_container:
+docker: 
 	docker build -t simple_service .
 
 package: 
