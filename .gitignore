@@ -1,0 +1,4 @@
+dist/
+simple_service.egg-info/
+pytest_cache/
+.vscode
