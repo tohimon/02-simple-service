@@ -1,5 +1,14 @@
 language: python
 install:
   - pip install -r requirements.txt
-script:
-  - py.test tests
+jobs:
+  include:
+    - stage: "Build"                # naming the Tests stage
+      name: "Building the project"            # names the first Tests stage job
+      script: make build
+    - stage: "Test"
+      name: "Running unit Tests"     # names the second Tests stage job
+      script: py.test
+    - stage: Package
+      name: "Building the delverables"
+      script: make package
