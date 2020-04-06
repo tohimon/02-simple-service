@@ -17,15 +17,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Run a following command in the terminal:
+Run a following command in the terminal to setup a virtualenv and install pip packages.
 
 ```bash
 make init
 ```
 
-This will setup a virtualenv and install pip packages. Then, activate the virtualenv:
+Then, activate the virtualenv:
 
-```
+```bash
 source venv/bin/activate
 ```
 
