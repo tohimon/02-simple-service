@@ -11,7 +11,7 @@ setuptools.setup(
     description="Simple service",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/tohimon/sampleproject",
+    url="https://github.com/tohimon/02-simple-service",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -19,4 +19,9 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    install_requires=[
+        'pytest', 
+        'pylint',
+        'clear_screen'
+        ]
 )
