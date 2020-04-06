@@ -14,7 +14,6 @@ These instructions will get you a copy of the project up and running on your loc
 * `python` > 3.6
 * `docker` (optional)
 
-
 ### Installing
 
 Run a following command in the terminal to setup a virtualenv and install pip packages.
@@ -41,12 +40,6 @@ Alternatively, build a docker image:
 make docker
 ```
 
-... or build a .tar.gz package:
-
-```bash
-make package
-```
-
 ## Running the tests
 
 Run a following command in the terminal:
@@ -55,7 +48,7 @@ Run a following command in the terminal:
 make test
 ```
 
-## Deployment
+## Usage
 
 Run a following command in the terminal:
 
@@ -71,7 +64,15 @@ Alternatively, run a docker image, if previously had been built:
 docker run ARG1 ARG2 ARG3 ARG4 ARG5 ARG6
 ```
 
-### Cleaning up
+## Packaging
+
+Build a .tar.gz package with a command:
+
+```bash
+make package
+```
+
+## Cleaning up
 
 This command will remove built packages and clean up the working directory.
 
